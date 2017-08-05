@@ -1,0 +1,19 @@
+{
+  "name": "hello-heroku-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbdyzj/hello-heroku-nodejs.git"
+  },
+  "author": "cbdyzj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbdyzj/hello-heroku-nodejs/issues"
+  },
+  "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme"
+}
