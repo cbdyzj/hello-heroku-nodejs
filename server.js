@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.all('/echo', (req, res) => {
     const { query, body } = req
+    console.log(query, body)
     res.json({ query, body })
 })
 http.createServer(app).listen(port, () => console.info(`server listening ${port}`))
