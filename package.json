@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node dist/main",
-    "stage": "ts-node src/main",
-    "build": "tsc",
-    "serve": "node server"
+    "ts-start": "npm run build && node dist/main",
+    "ts-stage": "ts-node src/main",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
