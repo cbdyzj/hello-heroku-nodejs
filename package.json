@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node dist/main",
+    "stage": "ts-node src/main",
     "build": "tsc"
   },
   "repository": {
