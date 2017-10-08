@@ -21,14 +21,13 @@
     "body-parser": "latest",
     "express": "latest",
     "express-session": "latest",
-    "moment": "latest",
-    "mysql2": "latest"
+    "moment": "latest"
   },
   "devDependencies": {
     "@types/body-parser": "latest",
     "@types/express": "latest",
     "@types/express-session": "latest",
-    "@types/node": "^8.0.33",
+    "@types/node": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
