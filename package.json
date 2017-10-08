@@ -1,10 +1,11 @@
 {
   "name": "hello-heroku-nodejs",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && node dist/main",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,18 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "body-parser": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "moment": "latest",
+    "mysql2": "latest"
   },
   "devDependencies": {
-    "@types/express": "^4.0.36"
+    "@types/body-parser": "latest",
+    "@types/express": "latest",
+    "@types/express-session": "latest",
+    "@types/node": "^8.0.33",
+    "ts-node": "latest",
+    "typescript": "latest"
   }
 }
