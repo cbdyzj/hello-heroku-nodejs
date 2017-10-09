@@ -20,9 +20,7 @@
     "body-parser": "latest",
     "express": "latest",
     "express-session": "latest",
-    "moment": "latest"
-  },
-  "devDependencies": {
+    "moment": "latest",
     "@types/body-parser": "latest",
     "@types/express": "latest",
     "@types/express-session": "latest",
