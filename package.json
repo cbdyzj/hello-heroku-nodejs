@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ts-start": "npm run build && node dist/main",
-    "ts-stage": "ts-node src/main",
-    "build": "tsc"
+    "start": "ts-node src/main"
   },
   "repository": {
     "type": "git",
