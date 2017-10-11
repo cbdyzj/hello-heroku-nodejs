@@ -17,14 +17,16 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
-    "body-parser": "latest",
-    "express": "latest",
-    "express-session": "latest",
-    "moment": "latest",
     "@types/body-parser": "latest",
     "@types/express": "latest",
     "@types/express-session": "latest",
     "@types/node": "latest",
+    "@types/sqlite3": "latest",
+    "body-parser": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "moment": "latest",
+    "sqlite3": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
