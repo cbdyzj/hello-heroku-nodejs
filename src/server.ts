@@ -11,7 +11,7 @@ export class Server {
     router: express.Router = express.Router()
 
     bootstrap(port: number | string = 3000): Server {
-        http.createServer(this.app).listen(port, () => console.log(`bind ${port}`))
+        http.createServer(this.app).listen(port, () => console.log(`port: ${port}`))
         return this
     }
 
