@@ -30,7 +30,6 @@
     "koa-router": "latest",
     "koa-static": "latest",
     "moment": "latest",
-    "sequelize": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   },
