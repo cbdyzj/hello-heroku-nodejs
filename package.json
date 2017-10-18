@@ -24,8 +24,6 @@
     "@types/koa-router": "latest",
     "@types/koa-static": "latest",
     "@types/node": "latest",
-    "@types/sequelize": "latest",
-    "@types/sqlite3": "latest",
     "koa": "latest",
     "koa-jwt": "latest",
     "koa-logger": "latest",
@@ -33,7 +31,6 @@
     "koa-static": "latest",
     "moment": "latest",
     "sequelize": "latest",
-    "sqlite3": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   },
