@@ -1,35 +1,6 @@
-import * as session from 'express-session'
-import * as express from 'express'
+import app from './app'
 import * as http from 'http'
-import * as path from 'path'
-import * as bodyParser from 'body-parser'
-import route from './route'
 
+const port = process.env.PORT || 3000
 
-export class Server {
-    app: express.Application = express()
-    router: express.Router = express.Router()
-
-    bootstrap(port: number | string = 3000): Server {
-        http.createServer(this.app).listen(port, () => console.log(`port: ${port}`))
-        return this
-    }
-
-    constructor() {
-        //中间件
-        this.app.use(session({
-            resave: false,
-            saveUninitialized: false,
-            secret: 'node-stack',
-        }))
-        this.app.use(bodyParser.json())
-        this.app.use(bodyParser.urlencoded({ extended: true }))
-
-        this.app.use(express.static(path.join(__dirname, '../public')))
-
-        //路由
-        route(this.router)
-        this.app.use(this.router)
-    }
-
-}
+app.listen(port, () => console.log(`监听端口：${port}`))

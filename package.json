@@ -1,10 +1,10 @@
 {
   "name": "hello-heroku-nodejs",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "nodejs app on heroku",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/main.ts",
+    "start": "ts-node src/server.ts",
     "test": "ls ./test | xargs -I {} ts-node ./test/{}"
   },
   "repository": {
@@ -18,15 +18,21 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
-    "@types/body-parser": "latest",
-    "@types/express": "latest",
-    "@types/express-session": "latest",
+    "@types/koa": "latest",
+    "@types/koa-jwt": "latest",
+    "@types/koa-logger": "latest",
+    "@types/koa-router": "latest",
+    "@types/koa-static": "latest",
     "@types/node": "latest",
+    "@types/sequelize": "latest",
     "@types/sqlite3": "latest",
-    "body-parser": "latest",
-    "express": "latest",
-    "express-session": "latest",
+    "koa": "latest",
+    "koa-jwt": "latest",
+    "koa-logger": "latest",
+    "koa-router": "latest",
+    "koa-static": "latest",
     "moment": "latest",
+    "sequelize": "latest",
     "sqlite3": "latest",
     "ts-node": "latest",
     "typescript": "latest"

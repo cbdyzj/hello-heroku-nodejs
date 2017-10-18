@@ -1,19 +1,9 @@
 import * as assert from 'assert'
 
-class TestTool {
-
-    is(current, expected) {
-        try {
-            assert(Object.is(current, expected))
-        } catch (error) {
-            console.error('current:', current, ', expected:', expected)
-            console.error(error)
-        }
-    }
+const t = {
+    is: (a, b) => assert(Object.is(a, b), `current: ${a}, expected: ${b}`)
 }
 
-type TestFunction = (t: TestTool) => void
-
-export async function test(fn: TestFunction) {
-    await fn(new TestTool())
+export async function test(cb) {
+    await cb(t)
 }

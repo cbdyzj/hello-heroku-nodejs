@@ -1,11 +1,10 @@
-import { Router } from 'express'
-import hello from './check'
+import * as Router from 'koa-router'
+import { checkService } from '../service'
 
-//新添加的路由放这个数组里面
-const routers: Array<(router: Router) => void> = [
-    hello,
-]
+const router = new Router
 
-export default function (router: Router): void {
-    routers.forEach(r => r(router))
-}
+router.get('/check', ctx => {
+    ctx.body = checkService()
+})
+
+export default router
