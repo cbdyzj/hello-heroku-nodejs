@@ -4,7 +4,7 @@
   "description": "nodejs app on heroku",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node server.js",
     "test": "ls ./test | xargs -I {} ts-node ./test/{}"
   },
   "repository": {
@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
+    "@types/express": "latest",
     "@types/koa": "latest",
     "@types/koa-jwt": "latest",
     "@types/koa-logger": "latest",
     "@types/koa-router": "latest",
     "@types/koa-static": "latest",
     "@types/node": "latest",
+    "express": "^4.16.2",
     "koa": "latest",
     "koa-jwt": "latest",
     "koa-logger": "latest",
