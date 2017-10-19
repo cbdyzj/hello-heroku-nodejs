@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es2016",
+    "outDir": "dist",
     "allowJs": true,
     "lib": [
       "es2017"
     ]
   },
-  "exclude": [
-    "node_modules"
-  ],
   "include": [
-    "src"
+    "src",
+    "node_modules"
   ]
 }
