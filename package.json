@@ -4,7 +4,7 @@
   "description": "nodejs app on heroku",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node server.js",
     "test": "ls ./test | xargs -I {} ts-node ./test/{}"
   },
   "repository": {
