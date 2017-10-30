@@ -1,7 +1,7 @@
 import * as moment from 'moment'
 
 //检测服务
-function checkService() {
+async function checkService() {
     return moment().toLocaleString()
 }
 

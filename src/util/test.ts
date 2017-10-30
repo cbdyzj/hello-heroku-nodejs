@@ -5,4 +5,3 @@ const t = {
 }
 
 export const test = (cb: Function) => cb(t)
-

@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es3",
     "allowJs": true,
+    "outDir": "dist",
     "lib": [
       "es2017"
     ]

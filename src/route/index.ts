@@ -3,8 +3,8 @@ import { checkService } from '../service'
 
 const router = new Router
 
-router.get('/check', ctx => {
-    ctx.body = checkService()
+router.get('/check', async ctx => {
+    ctx.body = await checkService()
 })
 
 export default router
