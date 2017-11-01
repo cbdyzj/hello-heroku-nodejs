@@ -19,15 +19,19 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
+    "amqplib": "latest",
     "express": "latest",
     "koa": "latest",
     "koa-jwt": "latest",
     "koa-logger": "latest",
     "koa-router": "latest",
+    "koa-session": "latest",
     "koa-static": "latest",
-    "moment": "latest"
+    "moment": "latest",
+    "redis": "latest"
   },
   "devDependencies": {
+    "@types/amqplib": "latest",
     "@types/express": "latest",
     "@types/koa": "latest",
     "@types/koa-jwt": "latest",
@@ -35,6 +39,7 @@
     "@types/koa-router": "latest",
     "@types/koa-static": "latest",
     "@types/node": "latest",
+    "@types/redis": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
