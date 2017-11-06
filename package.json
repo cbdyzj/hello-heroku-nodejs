@@ -24,12 +24,10 @@
     "koa": "latest",
     "koa-bodyparser": "latest",
     "koa-logger": "latest",
-    "koa-redis": "^3.1.1",
     "koa-router": "latest",
     "koa-session": "latest",
     "koa-static": "latest",
-    "moment": "latest",
-    "redis": "latest"
+    "moment": "latest"
   },
   "devDependencies": {
     "@types/express": "latest",
@@ -37,12 +35,10 @@
     "@types/koa": "latest",
     "@types/koa-bodyparser": "latest",
     "@types/koa-logger": "latest",
-    "@types/koa-redis": "^3.0.1",
     "@types/koa-router": "latest",
     "@types/koa-session": "^3.0.5",
     "@types/koa-static": "latest",
     "@types/node": "latest",
-    "@types/redis": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
