@@ -1,10 +1,7 @@
 import * as Router from 'koa-router'
-import { checkService } from '../service'
 
 const router = new Router
 
-router.get('/check', async ctx => {
-    ctx.body = await checkService()
-})
+router.get('/ping', ctx => ctx.body = 'pong')
 
 export default router
