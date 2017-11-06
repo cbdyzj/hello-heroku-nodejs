@@ -1,15 +1,21 @@
+import * as path from 'path'
 import * as Koa from 'koa'
 import * as serve from 'koa-static'
 import * as logger from 'koa-logger'
-import * as jwt from 'koa-jwt'
-import * as path from 'path'
+import * as bodyParser from 'koa-bodyparser'
+import * as session from 'koa-session'
+// import * as redisStore from 'koa-redis'
+
 import route from './route'
 
-const app = new Koa
+const store = undefined // redisStore({})
 
-app.use(serve(path.join(__dirname, '../public')))
+const app = new Koa
+app.keys = ['cbdyzj']
 app.use(logger())
-// app.use(jwt({ secret: 'heroku' }))
+app.use(serve(path.join(__dirname, '../public')))
+app.use(bodyParser())
+app.use(session({ store }, app))
 app.use(route.routes())
 
 export default app

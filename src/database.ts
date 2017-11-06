@@ -4,8 +4,8 @@ interface Database {
 }
 
 export default {
-    users: {
+    user: {
         username: 'Ada',
-        pasword: 'password',
+        password: 'password',
     },
 } as Database
