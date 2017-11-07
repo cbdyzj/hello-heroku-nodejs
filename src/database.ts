@@ -1,6 +1,6 @@
 
 interface Database {
-    [index: string]: any;
+    [index: string]: any
 }
 
 export default {

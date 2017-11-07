@@ -1,6 +1,6 @@
 {
   "name": "hello-heroku-nodejs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "nodejs app on heroku",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "@types/koa-bodyparser": "latest",
     "@types/koa-logger": "latest",
     "@types/koa-router": "latest",
-    "@types/koa-session": "^3.0.5",
+    "@types/koa-session": "latest",
     "@types/koa-static": "latest",
     "@types/node": "latest",
     "ts-node": "latest",
