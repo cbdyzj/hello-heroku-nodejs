@@ -6,7 +6,8 @@
   "scripts": {
     "express": "node server.js",
     "start": "ts-node src/server.ts",
-    "test": "ls ./test | xargs -I {} ts-node ./test/{}"
+    "test": "ls ./test | xargs -I {} ts-node ./test/{}",
+    "clean":"rm -rf dist"
   },
   "repository": {
     "type": "git",
