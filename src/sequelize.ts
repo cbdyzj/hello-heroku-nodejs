@@ -14,19 +14,19 @@ const options: Options = {
     operatorsAliases: false,
 }
 
-const sequelize: Sequelize = new SequelizeStatic(options)
+export const sequelize: Sequelize = new SequelizeStatic(options)
 
-interface 测试用例属性 {
+export interface 测试用例属性 {
     主键: number
     名字: string
     说明: string
 }
 
-interface 测试用例 extends Instance<测试用例属性> {
-    dataValues: 测试用例属性;
+export interface 测试用例 extends Instance<测试用例属性> {
+    dataValues: 测试用例属性
 }
 
-function define测试用例(sequelize: Sequelize, dataTypes: DataTypes): SequelizeStatic.Model<测试用例, 测试用例属性> {
+export function define测试用例(sequelize: Sequelize, dataTypes: DataTypes): SequelizeStatic.Model<测试用例, 测试用例属性> {
     return sequelize.define('测试用例', {
         主键: {
             type: SequelizeStatic.INTEGER,
@@ -42,4 +42,4 @@ function define测试用例(sequelize: Sequelize, dataTypes: DataTypes): Sequeli
     )
 }
 
-const 测试用例 = define测试用例(sequelize, SequelizeStatic)
+export const 测试用例 = define测试用例(sequelize, SequelizeStatic)
