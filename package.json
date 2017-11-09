@@ -7,7 +7,7 @@
     "express": "node server.js",
     "start": "ts-node src/server.ts",
     "test": "ls ./test | xargs -I {} ts-node ./test/{}",
-    "clean":"rm -rf dist"
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,9 @@
     "koa-router": "latest",
     "koa-session": "latest",
     "koa-static": "latest",
-    "moment": "latest"
+    "moment": "latest",
+    "mysql2": "latest",
+    "sequelize": "latest"
   },
   "devDependencies": {
     "@types/express": "latest",
@@ -40,6 +42,7 @@
     "@types/koa-session": "latest",
     "@types/koa-static": "latest",
     "@types/node": "latest",
+    "@types/sequelize": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
