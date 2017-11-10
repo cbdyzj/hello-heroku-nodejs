@@ -1,6 +1,6 @@
 import * as Router from 'koa-router'
-import database from './database'
 
+import database from './database'
 const router = new Router
 
 router.get('/api/ping', ctx => ctx.body = 'pong')
@@ -12,17 +12,14 @@ router.post('/api/login', async ctx => {
         || password !== database.user.password) {
         return ctx.body = { message: '登录失败!' }
     }
+    ctx.session
     ctx.session.user = database.user
-    console.log(ctx.session.user)
     return ctx.body = { message: '登录成功!' }
 })
 
-router.get('/api/login', async ctx => {
-    if (!ctx.session.user) {
-        return ctx.body = { user: 'Anonymous' }
-    }
-    return ctx.body = { user: ctx.session.user }
+router.get('/api/login', async (ctx: Router.IRouterContext & { user: any }) => {
+    const user = ctx.user || ctx.session.user || 'Anonymous'
+    return ctx.body = { user }
 })
-
 
 export default router
