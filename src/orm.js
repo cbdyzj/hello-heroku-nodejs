@@ -8,29 +8,81 @@ const options = {
     password: 'password',
     database: 'test',
     timezone: '+08:00',
-    logging: false,
+    // logging: false,
     isolationLevel: 'READ COMMITTED',
     operatorsAliases: false,
 }
 
 export const sequelize = new Sequelize(options)
 
-export function defineTest(sequelize, dataTypes) {
-    const attributes = {
+const testGroupDef = {
+    name: 'TestGroup',
+    attributes: {
         id: {
-            type: dataTypes.INTEGER,
+            type: Sequelize.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        name: Sequelize.STRING,
+        remark: Sequelize.TEXT,
+    },
+    options: {
+        tableName: 'test_groups',
+        createdAt: false,
+        updatedAt: false,
+    },
+    associate: false
+}
+
+const testDef = {
+    name: 'Test',
+    attributes: {
+        id: {
+            type: Sequelize.INTEGER,
             primaryKey: true
         },
-        name: dataTypes.STRING,
-        remark: dataTypes.STRING,
-    }
-    const options = {
+        name: Sequelize.STRING,
+        remark: Sequelize.TEXT,
+    },
+    options: {
         tableName: 'tests',
         createdAt: false,
         updatedAt: false,
+    },
+    associate: db => {
+        db.Test.belongsTo(db.TestGroup, {
+            foreignKey: {
+                name: 'group',
+                field: 'groupId'
+            }
+        })
     }
-    return sequelize.define('Test', attributes, options)
 }
 
-export const Test = defineTest(sequelize, Sequelize.DataTypes)
-Test.findAll().then(rs => rs.map(r => console.log(r.dataValues)))
+const defs = [testDef, testGroupDef]
+const db = {}
+
+for (const def of defs) {
+    db[def.name] = sequelize.define(def.name, def.attributes, def.options)
+}
+
+for (const def of defs) {
+    if (def.associate) {
+        def.associate(db)
+    }
+}
+
+async function t() {
+    await db.Test.create({ name: 'haha', group: 2, remark: 'xixi' })
+    const rs = await db.Test.findOne({
+        include: db.TestGroup,
+        where: {
+            id: 1
+        },
+        raw: true,
+        nest: true,
+    })
+    console.log(rs)
+}
+
+t().then(() => process.exit(0))
