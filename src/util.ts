@@ -1,6 +1,7 @@
 import * as assert from 'assert'
 import { Context } from 'koa'
 import database from './database'
+
 const t = {
     is: (a, b) => assert(Object.is(a, b), `current: ${a}, expected: ${b}`)
 }

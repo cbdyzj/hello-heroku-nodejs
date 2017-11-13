@@ -6,7 +6,7 @@
   "scripts": {
     "express": "node server.js",
     "start": "ts-node src/server.ts",
-    "test": "ls ./test | xargs -I {} ts-node ./test/{}",
+    "test": "ls ./test/*.ts | xargs -I {} ts-node ./{}",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "express": "latest",
     "http-proxy": "latest",
+    "jsonwebtoken": "latest",
     "koa": "latest",
     "koa-bodyparser": "latest",
     "koa-logger": "latest",
@@ -43,6 +44,7 @@
     "@types/koa-static": "latest",
     "@types/node": "latest",
     "@types/sequelize": "latest",
+    "@types/jsonwebtoken": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
