@@ -2,7 +2,7 @@ import * as Sequelize from 'sequelize'
 
 const options = {
     dialect: 'mysql',
-    host: '127.0.0.1',
+    host: 'arch',
     port: 3306,
     username: 'root',
     password: 'password',
@@ -15,7 +15,7 @@ const options = {
 
 export const sequelize = new Sequelize(options)
 
-const testGroupDef = {
+const testGroupDef = DataTypes => ({
     name: 'TestGroup',
     attributes: {
         id: {
@@ -32,9 +32,9 @@ const testGroupDef = {
         updatedAt: false,
     },
     associate: false
-}
+})
 
-const testDef = {
+const testDef = DataTypes => ({
     name: 'Test',
     attributes: {
         id: {
@@ -57,20 +57,21 @@ const testDef = {
             }
         })
     }
-}
+})
 
 const defs = [testDef, testGroupDef]
 const db = {}
+const associations = []
 
 for (const def of defs) {
-    db[def.name] = sequelize.define(def.name, def.attributes, def.options)
-}
-
-for (const def of defs) {
-    if (def.associate) {
-        def.associate(db)
+    const { name, attributes, options, associate } = def(Sequelize)
+    if (associate) {
+        associations.push(associate)
     }
+    db[def.name] = sequelize.define(name, attributes, options)
 }
+
+associations.forEach(associate => associate(db))
 
 async function t() {
     await db.Test.create({ name: 'haha', group: 2, remark: 'xixi' })
