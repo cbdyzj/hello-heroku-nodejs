@@ -1,12 +1,26 @@
+import { Options } from 'sequelize'
 
 interface Database {
     [index: string]: any
 }
 
-export default {
+export const database: Database = {
     user: {
         username: 'Ada',
         password: 'password',
         token: 'ada-token',
     },
-} as Database
+}
+
+// sequelize options
+export const options: Options = {
+    dialect: 'mysql',
+    host: 'localhost',
+    port: 3306,
+    username: 'root',
+    password: 'password',
+    database: 'test',
+    timezone: '+08:00',
+    isolationLevel: 'READ COMMITTED',
+    operatorsAliases: false,
+}

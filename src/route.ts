@@ -1,6 +1,6 @@
 import * as Router from 'koa-router'
 
-import database from './database'
+import { database } from './database'
 const router = new Router
 
 router.get('/api/ping', ctx => ctx.body = 'pong')
