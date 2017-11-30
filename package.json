@@ -21,11 +21,8 @@
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
     "express": "latest",
-    "http-proxy": "latest",
-    "jsonwebtoken": "latest",
     "koa": "latest",
     "koa-bodyparser": "latest",
-    "koa-logger": "latest",
     "koa-router": "latest",
     "koa-session": "latest",
     "koa-static": "latest",
@@ -36,12 +33,10 @@
     "@types/http-proxy": "latest",
     "@types/koa": "latest",
     "@types/koa-bodyparser": "latest",
-    "@types/koa-logger": "latest",
     "@types/koa-router": "latest",
     "@types/koa-session": "latest",
     "@types/koa-static": "latest",
     "@types/node": "latest",
-    "@types/jsonwebtoken": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }

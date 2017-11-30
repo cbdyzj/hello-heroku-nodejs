@@ -5,6 +5,8 @@ const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.get('/ping', (req, res) => res.end('pong'))
+
 const port = process.env.PORT || 4200
 
 app.listen(port)
