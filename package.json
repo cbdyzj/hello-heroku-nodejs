@@ -6,9 +6,9 @@
   "scripts": {
     "express": "node server.js",
     "start": "ts-node src/server.ts",
-    "test": "ls ./test/*.ts | xargs -I {} ts-node ./{}",
     "clean": "rm -rf dist"
   },
+  "script": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cbdyzj/hello-heroku-nodejs.git"
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@types/express": "latest",
-    "@types/http-proxy": "latest",
     "@types/koa": "latest",
     "@types/koa-bodyparser": "latest",
     "@types/koa-router": "latest",
