@@ -13,7 +13,7 @@ function login({ username, password }, session) {
         return { message: '登录失败' }
     } else {
         session.user = 'Ada'
-        return { message: '登陆成功' }
+        return { message: '登录成功' }
     }
 }
 
