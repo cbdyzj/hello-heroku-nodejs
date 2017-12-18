@@ -6,7 +6,7 @@ router.get('/api/ping', ctx => ctx.body = 'pong')
 
 router.get('/api/login', ctx => ctx.body = { user: ctx.session.user || 'Anonymous' })
 
-router.post('/api/login', async ctx => ctx.body = login(ctx.request.body, ctx.session))
+router.post('/api/login', ctx => ctx.body = login(ctx.request.body, ctx.session))
 
 function login({ username, password }, session) {
     if (username !== 'Ada' || password !== 'password') {
