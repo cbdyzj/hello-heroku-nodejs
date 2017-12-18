@@ -7,7 +7,7 @@ import * as session from 'koa-session'
 import route from './route'
 
 const app = new Koa
-app.keys = ['cbdyzj']
+app.keys = ['koa']
 
 app.use(serve(path.join(__dirname, '../public')))
 
