@@ -4,9 +4,7 @@
   "description": "nodejs app on heroku",
   "main": "index.js",
   "scripts": {
-    "express": "node server.js",
-    "start": "ts-node src/server.ts",
-    "clean": "rm -rf dist"
+    "express": "node server.js"
   },
   "script": "server.js",
   "repository": {
@@ -20,21 +18,10 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
-    "express": "latest",
-    "koa": "latest",
-    "koa-bodyparser": "latest",
-    "koa-router": "latest",
-    "koa-session": "latest",
-    "koa-static": "latest",
-    "moment": "latest"
+    "express": "latest"
   },
   "devDependencies": {
     "@types/express": "latest",
-    "@types/koa": "latest",
-    "@types/koa-bodyparser": "latest",
-    "@types/koa-router": "latest",
-    "@types/koa-session": "latest",
-    "@types/koa-static": "latest",
     "@types/node": "latest",
     "ts-node": "latest",
     "typescript": "latest"
