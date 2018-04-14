@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/express": "latest",
     "@types/node": "latest",
-    "axios": "^0.18.0",
+    "axios": "latest",
     "eslint": "latest",
     "eslint-config-standard": "latest",
     "eslint-plugin-import": "latest",
