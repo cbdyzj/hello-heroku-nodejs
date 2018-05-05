@@ -1,5 +1,5 @@
 start_server:
   script:
     - npm i
-    - npm start
+    - pm2 restart package.json
   stage: deploy
