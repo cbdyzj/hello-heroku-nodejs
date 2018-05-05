@@ -1,0 +1,4 @@
+start_server:
+  script:
+    - npm start
+  stage: deploy
