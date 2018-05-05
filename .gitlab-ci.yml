@@ -1,7 +1,5 @@
-before_script:
-  - npm i
-
 start_server:
   script:
+    - npm i
     - npm start
   stage: deploy
