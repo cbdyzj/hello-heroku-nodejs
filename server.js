@@ -6,6 +6,6 @@ const port = process.env.PORT || 3000
 const app = express()
 
 app.use(express.static(join(__dirname, 'static')))
-app.get('/ping', (req, res) => res.end('pong'))
+app.all('/ping', (req, res) => res.end('pong'))
 
 app.listen(port)
