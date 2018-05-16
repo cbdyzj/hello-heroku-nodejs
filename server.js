@@ -3,4 +3,9 @@ const { join } = require('path')
 
 const port = process.env.PORT || 3000
 
-express().use(express.static(join(__dirname, 'static'))).listen(port)
+const app = express()
+
+app.use(express.static(join(__dirname, 'static')))
+app.get('/ping', (req, res) => res.end('pong'))
+
+app.listen(port)
