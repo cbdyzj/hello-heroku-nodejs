@@ -1,3 +1,3 @@
 # hello-heroku-nodejs
 
-- heroku.jianzhao.org
+- https://hello-heroku-nodejs.herokuapp.com/
