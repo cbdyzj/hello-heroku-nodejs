@@ -1,12 +1,11 @@
 {
   "name": "hello-heroku-nodejs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "nodejs app on heroku",
   "main": "index.js",
   "scripts": {
-    "express": "node server.js"
+    "start": "node server.js"
   },
-  "script": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cbdyzj/hello-heroku-nodejs.git"
@@ -18,19 +17,6 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "dependencies": {
-    "express": "latest"
-  },
-  "devDependencies": {
-    "@types/express": "latest",
-    "@types/node": "latest",
-    "axios": "latest",
-    "eslint": "latest",
-    "eslint-config-standard": "latest",
-    "eslint-plugin-import": "latest",
-    "eslint-plugin-node": "latest",
-    "eslint-plugin-promise": "latest",
-    "eslint-plugin-standard": "latest",
-    "ts-node": "latest",
-    "typescript": "latest"
+    "express": "^4.17.1"
   }
 }

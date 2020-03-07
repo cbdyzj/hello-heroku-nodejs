@@ -1,5 +1,0 @@
-start_server:
-  script:
-    - npm i
-    - pm2 restart package.json
-  stage: deploy
