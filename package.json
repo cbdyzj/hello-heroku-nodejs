@@ -1,11 +1,22 @@
 {
   "name": "hello-heroku-nodejs",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "nodejs app on heroku",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.mjs",
+    "build": "marp -I slides -o dist"
   },
+  "type": "module",
+  "engines": {
+    "node": ">=14",
+    "yarn": ">=1.22"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cbdyzj/hello-heroku-nodejs.git"
