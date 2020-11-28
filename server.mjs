@@ -1,20 +1,12 @@
-import { fileURLToPath } from 'url'
-import { join as joinPath, dirname } from 'path'
-
 import express from 'express'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-
-const handleStatic = (...ds) => ds.map(d => express.static(joinPath(__dirname, d)))
+const { static: serveStatic } = express
 
 const app = express()
 
 // static files
-app.use(...handleStatic('static', 'dist'))
-
-// body parser
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(serveStatic('static'))
+app.use(serveStatic('dist'))
 
 app.get('/ping', (req, res) => {
     res.end('pong')
