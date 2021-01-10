@@ -37,7 +37,7 @@ if ("Alice".equals(name)) {
 ## 注意自动拆箱时的空指针：参数传递、`==`比较
 
 ```java
-Integer n = getName();
+Integer n = getNum();
 // Unboxing of 'n' may produce 'NullPointerException' 
 if(1 == n){
     // ...
