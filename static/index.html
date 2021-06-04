@@ -7,20 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
+        * {
+            -webkit-tap-highlight-color: transparent;
         }
 
-        h1 {
-            font-size: 64px;
-            text-align: center;
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
+
+        .nav {
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 1rem;
+            max-width: 800px;
+        }
+
+        .nav > ul {
+            box-sizing: border-box;
+            border: 1px solid #eee;
+            padding: 0;
+
+        }
+
+        .nav > ul > li {
+            list-style: none;
+            padding: 1rem 1rem;
+            cursor: pointer;
+        }
+
+        .nav > ul > li:hover {
+            background-color: #eee;
+        }
+
+
+        .link {
+            color: inherit;
+            text-decoration: inherit;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+            opacity: .75;
+        }
+
     </style>
 </head>
 
 <body>
-<h1>你好哇，HEROKU！</h1>
+<div>
+    <nav class="nav">
+        <ul>
+            <li><a class="link" href="/npe.html">对NullPointerException说NO！</a></li>
+        </ul>
+    </nav>
+</div>
 </body>
 
 </html>

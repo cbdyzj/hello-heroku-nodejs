@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/cbdyzj/hello-heroku-nodejs#readme",
   "devDependencies": {
-    "@marp-team/marp-cli": "^0.22.0"
+    "@marp-team/marp-cli": "^1.1.1"
   },
   "dependencies": {
     "express": "^4.17.1"
