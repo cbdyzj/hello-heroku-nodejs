@@ -1,10 +1,10 @@
 {
   "name": "hello-heroku-nodejs",
-  "version": "0.2.0",
-  "description": "nodejs app on heroku",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "hello-heroku-nodejs",
+  "main": "main.js",
   "scripts": {
-    "start": "node server.mjs",
+    "start": "node serve.js",
     "build": "marp -I slides -o dist"
   },
   "type": "module",
