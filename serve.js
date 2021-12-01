@@ -1,16 +1,10 @@
 import express from 'express'
 
-const { static: serveStatic } = express
-
 const app = express()
 
-app.use(serveStatic('static'))
-app.use(serveStatic('slides'))
-app.use(serveStatic('dist'))
-
-app.get('/ping', (req, res) => {
-    res.end('pong')
-})
+app.use(express.static('static'))
+app.use(express.static('slides'))
+app.use(express.static('dist'))
 
 const port = process.env.PORT || 3000
 
